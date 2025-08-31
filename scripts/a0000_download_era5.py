@@ -11,6 +11,9 @@ Requirements:
 - Valid CDS API credentials in ~/.cdsapirc
 
 Output files: era5_YYYY_MM_variable.grib (e.g., era5_2024_01_2m_temperature.grib)
+
+Author: John Palmer
+Date: August 2025
 """
 
 # Import required libraries
