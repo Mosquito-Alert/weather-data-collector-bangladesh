@@ -75,6 +75,14 @@ cd ~/research/weather-data-collector-bangladesh
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 25 "Pulling latest changes from git"
 git pull origin main
 
+# Clean up any Python cache files that might reference old scripts
+find . -name "*.pyc" -delete
+find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+
+# List the actual files in scripts directory for debugging
+log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 26 "Checking script files"
+ls -la scripts/
+
 # Create output directory if it doesn't exist
 mkdir -p data/output
 
@@ -83,7 +91,7 @@ log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 3
 python3 scripts/a0000_download_era5.py
 
 # Run weather data wrangling
-log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 80 "Starting to wranglt weather data"
+log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 80 "Starting weather data wrangling"
 python3 scripts/a0001_wrangle_era5_data.py
 
 # Commit and push the log files from this latest run
