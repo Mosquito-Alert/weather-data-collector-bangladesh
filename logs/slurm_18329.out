@@ -1,0 +1,533 @@
+Agent pid 948273
+Sun Aug 31 20:52:38 CEST 2025: [era5_weather_data] running - Step 5 - Elapsed: 0s - Starting ERA5 weather data pipeline
+Sun Aug 31 20:52:38 CEST 2025: [era5_weather_data] running - Step 10 - Elapsed: 0s - Loading modules
+Sun Aug 31 20:52:43 CEST 2025: [era5_weather_data] running - Step 15 - Elapsed: 5s - Setting up conda environment
+Dask already installed or failed to install
+Sun Aug 31 20:52:45 CEST 2025: [era5_weather_data] running - Step 20 - Elapsed: 7s - Changing to project directory
+Sun Aug 31 20:52:45 CEST 2025: [era5_weather_data] running - Step 25 - Elapsed: 7s - Pulling latest changes from git
+Already up to date.
+Sun Aug 31 20:52:47 CEST 2025: [era5_weather_data] running - Step 26 - Elapsed: 9s - Checking script files
+total 22
+drwxr-xr-x 2 j.palmer cblab     2 Aug 31 20:51 .
+drwxr-xr-x 6 j.palmer cblab     8 Aug 31 20:51 ..
+-rw-r--r-- 1 j.palmer cblab  7809 Aug 31 18:52 a0000_download_era5.py
+-rw-r--r-- 1 j.palmer cblab 12385 Aug 31 20:51 a0001_wrangle_era5_data_monthly.py
+Sun Aug 31 20:52:47 CEST 2025: [era5_weather_data] running - Step 30 - Elapsed: 9s - Starting ERA5 data download
+Starting ERA5 data download check for years 2024-2025
+Current date: 2025-08-31 20:52:49
+✓ Already exists: era5_2024_01_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_02_2m_dewpoint_temperature.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_2m_temperature.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_10m_u_component_of_wind.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_10m_v_component_of_wind.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_surface_pressure.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_total_precipitation.grib (7,845,312 bytes)
+✓ Already exists: era5_2024_03_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_04_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_05_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_06_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_07_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_08_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_09_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_10_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_11_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_12_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_01_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_02_2m_dewpoint_temperature.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_2m_temperature.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_10m_u_component_of_wind.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_10m_v_component_of_wind.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_surface_pressure.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_total_precipitation.grib (7,574,784 bytes)
+✓ Already exists: era5_2025_03_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_04_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2025_05_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_06_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2025_07_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_08_2m_dewpoint_temperature.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_2m_temperature.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_10m_u_component_of_wind.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_10m_v_component_of_wind.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_surface_pressure.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_total_precipitation.grib (6,921,008 bytes)
+
+============================================================
+DOWNLOAD SUMMARY
+============================================================
+Total files needed:     120
+Files already existed:  120
+Files downloaded:       0
+Files failed:           0
+Success rate:           100.0%
+============================================================
+Sun Aug 31 20:52:49 CEST 2025: [era5_weather_data] running - Step 80 - Elapsed: 11s - Starting weather data wrangling (monthly files)
+ERA5 Data Wrangling - Monthly File Organization
+============================================================
+Run time: 2025-08-31 20:52:52
+🔍 Scanning directory for available data files...
+✓ Found 120 GRIB files organized into 20 months
+📊 Found data for 20 months
+📋 Previously processed: 0 months
+
+📅 Processing 2024-01
+----------------------------------------
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_01_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_01_2m_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_01_total_precipitation.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_01_surface_pressure.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_01_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_01_2m_dewpoint_temperature.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_01_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 105.1 MB
+
+📅 Processing 2024-02
+----------------------------------------
+  ✓ Processing: total_precipitation
+  ⚠ Removed 773088 rows with invalid values from era5_2024_02_total_precipitation.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 773088 rows with invalid values from era5_2024_02_10m_u_component_of_wind.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 773088 rows with invalid values from era5_2024_02_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 773088 rows with invalid values from era5_2024_02_2m_dewpoint_temperature.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 773088 rows with invalid values from era5_2024_02_2m_temperature.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 773088 rows with invalid values from era5_2024_02_surface_pressure.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_02_all_variables.csv.gz
+  ✓ Saved: 14,749,632 rows, 98.6 MB
+
+📅 Processing 2024-03
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_03_10m_v_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_03_surface_pressure.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_03_2m_dewpoint_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_03_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_03_2m_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_03_total_precipitation.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_03_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 106.8 MB
+
+📅 Processing 2024-04
+----------------------------------------
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_04_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 796032 rows with invalid values from era5_2024_04_total_precipitation.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_04_2m_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_04_10m_u_component_of_wind.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_04_10m_v_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 796032 rows with invalid values from era5_2024_04_surface_pressure.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_04_all_variables.csv.gz
+  ✓ Saved: 15,258,240 rows, 104.8 MB
+
+📅 Processing 2024-05
+----------------------------------------
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_05_2m_temperature.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_05_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_05_total_precipitation.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_05_10m_u_component_of_wind.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_05_10m_v_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_05_surface_pressure.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_05_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 110.6 MB
+
+📅 Processing 2024-06
+----------------------------------------
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_06_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_06_2m_dewpoint_temperature.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 796032 rows with invalid values from era5_2024_06_surface_pressure.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 796032 rows with invalid values from era5_2024_06_total_precipitation.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_06_2m_temperature.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_06_10m_v_component_of_wind.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_06_all_variables.csv.gz
+  ✓ Saved: 15,258,240 rows, 106.9 MB
+
+📅 Processing 2024-07
+----------------------------------------
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_07_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_07_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_07_total_precipitation.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_07_surface_pressure.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_07_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_07_2m_temperature.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_07_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 110.0 MB
+
+📅 Processing 2024-08
+----------------------------------------
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_08_surface_pressure.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_08_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_08_total_precipitation.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_08_2m_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_08_10m_u_component_of_wind.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_08_10m_v_component_of_wind.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_08_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 110.2 MB
+
+📅 Processing 2024-09
+----------------------------------------
+  ✓ Processing: total_precipitation
+  ⚠ Removed 796032 rows with invalid values from era5_2024_09_total_precipitation.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 796032 rows with invalid values from era5_2024_09_surface_pressure.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_09_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_09_2m_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_09_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_09_2m_dewpoint_temperature.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_09_all_variables.csv.gz
+  ✓ Saved: 15,258,240 rows, 106.7 MB
+
+📅 Processing 2024-10
+----------------------------------------
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_10_surface_pressure.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_10_total_precipitation.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_10_2m_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_10_10m_u_component_of_wind.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_10_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_10_2m_dewpoint_temperature.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_10_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 111.0 MB
+
+📅 Processing 2024-11
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_11_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_11_2m_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 796032 rows with invalid values from era5_2024_11_total_precipitation.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2024_11_10m_u_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 796032 rows with invalid values from era5_2024_11_surface_pressure.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2024_11_2m_dewpoint_temperature.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_11_all_variables.csv.gz
+  ✓ Saved: 15,258,240 rows, 103.4 MB
+
+📅 Processing 2024-12
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_12_10m_v_component_of_wind.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2024_12_10m_u_component_of_wind.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2024_12_total_precipitation.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_12_2m_dewpoint_temperature.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2024_12_surface_pressure.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2024_12_2m_temperature.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2024_12_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 102.0 MB
+
+📅 Processing 2025-01
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_01_10m_v_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2025_01_surface_pressure.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2025_01_total_precipitation.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_01_2m_temperature.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_01_2m_dewpoint_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_01_10m_u_component_of_wind.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_01_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 103.4 MB
+
+📅 Processing 2025-02
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 750144 rows with invalid values from era5_2025_02_10m_v_component_of_wind.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 750144 rows with invalid values from era5_2025_02_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 750144 rows with invalid values from era5_2025_02_2m_dewpoint_temperature.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 750144 rows with invalid values from era5_2025_02_2m_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 750144 rows with invalid values from era5_2025_02_total_precipitation.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 750144 rows with invalid values from era5_2025_02_surface_pressure.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_02_all_variables.csv.gz
+  ✓ Saved: 14,241,024 rows, 95.6 MB
+
+📅 Processing 2025-03
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_03_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_03_2m_temperature.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_03_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2025_03_total_precipitation.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_03_10m_u_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2025_03_surface_pressure.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_03_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 105.7 MB
+
+📅 Processing 2025-04
+----------------------------------------
+  ✓ Processing: surface_pressure
+  ⚠ Removed 796032 rows with invalid values from era5_2025_04_surface_pressure.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2025_04_2m_temperature.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2025_04_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 796032 rows with invalid values from era5_2025_04_total_precipitation.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2025_04_10m_v_component_of_wind.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2025_04_10m_u_component_of_wind.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_04_all_variables.csv.gz
+  ✓ Saved: 15,258,240 rows, 107.1 MB
+
+📅 Processing 2025-05
+----------------------------------------
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_05_10m_u_component_of_wind.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2025_05_total_precipitation.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_05_2m_temperature.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_05_2m_dewpoint_temperature.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2025_05_surface_pressure.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_05_10m_v_component_of_wind.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_05_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 111.0 MB
+
+📅 Processing 2025-06
+----------------------------------------
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2025_06_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2025_06_2m_temperature.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 796032 rows with invalid values from era5_2025_06_surface_pressure.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 796032 rows with invalid values from era5_2025_06_2m_dewpoint_temperature.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 796032 rows with invalid values from era5_2025_06_10m_u_component_of_wind.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 796032 rows with invalid values from era5_2025_06_total_precipitation.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_06_all_variables.csv.gz
+  ✓ Saved: 15,258,240 rows, 106.9 MB
+
+📅 Processing 2025-07
+----------------------------------------
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_07_2m_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 818976 rows with invalid values from era5_2025_07_total_precipitation.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_07_10m_u_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 818976 rows with invalid values from era5_2025_07_2m_dewpoint_temperature.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 818976 rows with invalid values from era5_2025_07_10m_v_component_of_wind.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 818976 rows with invalid values from era5_2025_07_surface_pressure.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_07_all_variables.csv.gz
+  ✓ Saved: 15,766,848 rows, 110.2 MB
+
+📅 Processing 2025-08
+----------------------------------------
+  ✓ Processing: 2m_temperature
+  ⚠ Removed 739576 rows with invalid values from era5_2025_08_2m_temperature.grib
+  ✓ Processing: 10m_v_component_of_wind
+  ⚠ Removed 739576 rows with invalid values from era5_2025_08_10m_v_component_of_wind.grib
+  ✓ Processing: 2m_dewpoint_temperature
+  ⚠ Removed 739576 rows with invalid values from era5_2025_08_2m_dewpoint_temperature.grib
+  ✓ Processing: total_precipitation
+  ⚠ Removed 739576 rows with invalid values from era5_2025_08_total_precipitation.grib
+  ✓ Processing: surface_pressure
+  ⚠ Removed 739576 rows with invalid values from era5_2025_08_surface_pressure.grib
+  ✓ Processing: 10m_u_component_of_wind
+  ⚠ Removed 739576 rows with invalid values from era5_2025_08_10m_u_component_of_wind.grib
+  📊 Combining 6 variables...
+  💾 Saving to: era5_2025_08_all_variables.csv.gz
+  ✓ Saved: 13,011,888 rows, 91.0 MB
+
+📋 Creating recent data summary...
+  📊 Combining 3 recent files...
+  ✓ Loaded: era5_2025_08_all_variables.csv.gz (13,011,888 rows)
+  ✓ Loaded: era5_2025_07_all_variables.csv.gz (15,766,848 rows)
+  ✓ Loaded: era5_2025_06_all_variables.csv.gz (15,258,240 rows)
+  💾 Saved recent summary: 44,036,976 rows, 308.1 MB
+
+============================================================
+FINAL SUMMARY
+============================================================
+Months processed this run: 20
+Files processed this run: 120
+Total months available: 20
+Output directory: /home/j.palmer/research/weather-data-collector-bangladesh/data/output/processed
+============================================================
+✓ ERA5 monthly processing completed!
+Sun Aug 31 22:12:09 CEST 2025: [era5_weather_data] running - Step 90 - Elapsed: 4771s - Committing and pushing results
