@@ -482,3 +482,7 @@ To opt-in to future behavior, set `decode_timedelta=False`.
 To continue decoding into a timedelta64 dtype, either set `decode_timedelta=True` when opening this dataset, or add the attribute `dtype='timedelta64[ns]'` to this variable on disk.
 To opt-in to future behavior, set `decode_timedelta=False`.
   vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+From github.com:Mosquito-Alert/weather-data-collector-bangladesh
+ * branch            main       -> FETCH_HEAD
+To github.com:Mosquito-Alert/weather-data-collector-bangladesh.git
+   221c193..8e92012  main -> main
