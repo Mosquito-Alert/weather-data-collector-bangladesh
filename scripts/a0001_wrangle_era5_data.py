@@ -34,6 +34,10 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 import multiprocessing
 from functools import partial
 import gc  # For garbage collection
+import warnings
+
+# Suppress xarray future warnings about timedelta decoding
+warnings.filterwarnings("ignore", message=".*timedelta64.*", category=FutureWarning)
 
 # Configuration
 currentMonth = datetime.now().month
@@ -148,10 +152,17 @@ def load_grib_to_long_format(filepath, variable_name, year, month):
         pd.DataFrame: Long-format DataFrame with the weather data
     """
     try:
-        # Load GRIB file using xarray with optimized settings
-        with xr.open_dataset(filepath, engine='cfgrib', chunks={'time': 100}) as dataset:
-            # Convert to DataFrame more efficiently
-            df = dataset.to_dataframe()
+        # Try optimized loading first (with dask if available)
+        try:
+            with xr.open_dataset(filepath, engine='cfgrib', chunks={'time': 100}) as dataset:
+                df = dataset.to_dataframe()
+        except (ImportError, ValueError) as e:
+            # Fallback to non-chunked loading if dask is not available
+            if "dask" in str(e).lower() or "chunk" in str(e).lower():
+                with xr.open_dataset(filepath, engine='cfgrib') as dataset:
+                    df = dataset.to_dataframe()
+            else:
+                raise e
         
         # Reset index to make lat/lon/time regular columns
         df = df.reset_index()

@@ -64,8 +64,18 @@ source /software/eb/software/Miniconda3/24.7.1-0/etc/profile.d/conda.sh
 
 # Activate era5_env environment (create if it doesn't exist)
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 15 "Setting up conda environment"
-
-conda activate era5_env
+if ! conda env list | grep -q "era5_env"; then
+    log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 16 "Creating new conda environment era5_env"
+    conda create -n era5_env python=3.12 -y
+    conda activate era5_env
+    # Install required packages (including dask for performance)
+    conda install -c conda-forge cdsapi xarray cfgrib eccodes pandas dask -y
+    pip install ecmwf-api-client
+else
+    conda activate era5_env
+    # Update packages if environment exists
+    conda install -c conda-forge dask -y 2>/dev/null || echo "Dask already installed or failed to install"
+fi
 
 # Starting in project directory
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 20 "Changing to project directory"
