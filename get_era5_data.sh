@@ -100,9 +100,9 @@ mkdir -p data/output
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 30 "Starting ERA5 data download"
 python3 scripts/a0000_download_era5.py
 
-# Run weather data wrangling
-log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 80 "Starting weather data wrangling"
-python3 scripts/a0001_wrangle_era5_data.py
+# Run weather data wrangling (monthly approach)
+log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 80 "Starting weather data wrangling (monthly files)"
+python3 scripts/a0001_wrangle_era5_data_monthly.py
 
 # Commit and push the log files from this latest run
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 90 "Committing and pushing results"
