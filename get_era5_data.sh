@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --partition=ceab
-#SBATCH --ntasks=4
-#SBATCH --mem=32G
+#SBATCH --ntasks=16
+#SBATCH --mem=64G
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=johnrbpalmer@gmail.com
 #SBATCH --job-name=era5_weather_data
@@ -42,6 +42,9 @@ export LC_PAPER=C.UTF-8
 export LC_MEASUREMENT=C.UTF-8
 export LANG=C.UTF-8
 
+export OMP_NUM_THREADS=1
+export NUMEXPR_MAX_THREADS=16
+
 export LD_LIBRARY_PATH=/software/eb/software/PROJ/9.4.1-GCCcore-13.3.0/lib:$LD_LIBRARY_PATH
 
 # Load necessary modules 
@@ -61,17 +64,8 @@ source /software/eb/software/Miniconda3/24.7.1-0/etc/profile.d/conda.sh
 
 # Activate era5_env environment (create if it doesn't exist)
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 15 "Setting up conda environment"
-if ! conda env list | grep -q "era5_env"; then
-    log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 16 "Creating new conda environment era5_env"
-    conda create -n era5_env python=3.12 -y
-    conda activate era5_env
-    # Install required packages
-    conda install -c conda-forge xarray cfgrib eccodes pandas -y
-    pip install ecmwf-api-client
-    pip install cdsapi
-else
-    conda activate era5_env
-fi
+
+conda activate era5_env
 
 # Starting in project directory
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 20 "Changing to project directory"
@@ -89,8 +83,8 @@ log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 3
 python3 scripts/a0000_download_era5.py
 
 # Run weather data wrangling
-log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 80 "Starting weather data wrangling"
-python3 scripts/a0000_weather_wrangling.py
+log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 80 "Starting to wranglt weather data"
+python3 scripts/a0001_wrangle_era5_data.py
 
 # Commit and push the log files from this latest run
 log_status "era5_weather_data" "running" $(($(date +%s) - $SCRIPT_START_TIME)) 90 "Committing and pushing results"
