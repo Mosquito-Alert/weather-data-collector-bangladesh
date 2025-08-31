@@ -1,0 +1,440 @@
+Agent pid 947328
+Sun Aug 31 19:01:08 CEST 2025: [era5_weather_data] running - Step 5 - Elapsed: 0s - Starting ERA5 weather data pipeline
+Sun Aug 31 19:01:08 CEST 2025: [era5_weather_data] running - Step 10 - Elapsed: 0s - Loading modules
+Sun Aug 31 19:01:13 CEST 2025: [era5_weather_data] running - Step 15 - Elapsed: 5s - Setting up conda environment
+Dask already installed or failed to install
+Sun Aug 31 19:01:16 CEST 2025: [era5_weather_data] running - Step 20 - Elapsed: 8s - Changing to project directory
+Sun Aug 31 19:01:16 CEST 2025: [era5_weather_data] running - Step 25 - Elapsed: 8s - Pulling latest changes from git
+Already up to date.
+Sun Aug 31 19:01:18 CEST 2025: [era5_weather_data] running - Step 26 - Elapsed: 10s - Checking script files
+total 26
+drwxr-xr-x 2 j.palmer cblab     2 Aug 31 19:00 .
+drwxr-xr-x 6 j.palmer cblab     8 Aug 31 19:00 ..
+-rw-r--r-- 1 j.palmer cblab  7809 Aug 31 18:52 a0000_download_era5.py
+-rw-r--r-- 1 j.palmer cblab 16724 Aug 31 19:00 a0001_wrangle_era5_data.py
+Sun Aug 31 19:01:18 CEST 2025: [era5_weather_data] running - Step 30 - Elapsed: 10s - Starting ERA5 data download
+Starting ERA5 data download check for years 2024-2025
+Current date: 2025-08-31 19:01:19
+✓ Already exists: era5_2024_01_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_01_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_02_2m_dewpoint_temperature.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_2m_temperature.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_10m_u_component_of_wind.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_10m_v_component_of_wind.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_surface_pressure.grib (5,387,040 bytes)
+✓ Already exists: era5_2024_02_total_precipitation.grib (7,845,312 bytes)
+✓ Already exists: era5_2024_03_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_03_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_04_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_04_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_05_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_05_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_06_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_06_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_07_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_07_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_08_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_08_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_09_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_09_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_10_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_10_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2024_11_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2024_11_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2024_12_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2024_12_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_01_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_01_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_02_2m_dewpoint_temperature.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_2m_temperature.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_10m_u_component_of_wind.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_10m_v_component_of_wind.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_surface_pressure.grib (5,201,280 bytes)
+✓ Already exists: era5_2025_02_total_precipitation.grib (7,574,784 bytes)
+✓ Already exists: era5_2025_03_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_03_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_04_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_04_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2025_05_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_05_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_06_2m_dewpoint_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_2m_temperature.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_10m_u_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_10m_v_component_of_wind.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_surface_pressure.grib (5,572,800 bytes)
+✓ Already exists: era5_2025_06_total_precipitation.grib (8,115,840 bytes)
+✓ Already exists: era5_2025_07_2m_dewpoint_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_2m_temperature.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_10m_u_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_10m_v_component_of_wind.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_surface_pressure.grib (5,758,560 bytes)
+✓ Already exists: era5_2025_07_total_precipitation.grib (8,386,368 bytes)
+✓ Already exists: era5_2025_08_2m_dewpoint_temperature.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_2m_temperature.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_10m_u_component_of_wind.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_10m_v_component_of_wind.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_surface_pressure.grib (4,752,360 bytes)
+✓ Already exists: era5_2025_08_total_precipitation.grib (6,921,008 bytes)
+
+============================================================
+DOWNLOAD SUMMARY
+============================================================
+Total files needed:     120
+Files already existed:  120
+Files downloaded:       0
+Files failed:           0
+Success rate:           100.0%
+============================================================
+Sun Aug 31 19:01:19 CEST 2025: [era5_weather_data] running - Step 80 - Elapsed: 11s - Starting weather data wrangling
+ERA5 Data Wrangling - Long Format Consolidation
+============================================================
+Output file: era5_weather_data_long.csv.gz
+Run time: 2025-08-31 19:01:22
+🔍 Scanning directory for available data files...
+✓ Found 120 GRIB files
+✓ Years available: [2024, 2025]
+✓ Variables available: ['10m_u_component_of_wind', '10m_v_component_of_wind', '2m_dewpoint_temperature', '2m_temperature', 'surface_pressure', 'total_precipitation']
+📊 Will process 6 variables across 2 years
+Input directory: /home/j.palmer/research/weather-data-collector-bangladesh/data/output
+Output directory: /home/j.palmer/research/weather-data-collector-bangladesh/data/output
+
+📊 Processing all data into long format (using 16 parallel workers)
+------------------------------------------------------------
+📋 No existing output file found - will create new file
+🔍 Building file processing queue...
+📋 Queue built: 120 files to process
+   Files skipped (already exist): 0
+   Files missing: 0
+🚀 Starting parallel processing in batches of 20...
+
+📦 Processing batch 1/6 (20 files)
+✗ Error loading era5_2024_04_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_12_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_07_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_09_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_04_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_03_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_11_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_06_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_05_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_08_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_10_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_03_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_02_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_05_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_01_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_06_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_02_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_08_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_01_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_07_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+⚠ Empty result: era5_2024_02_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_01_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_01_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_02_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_04_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_03_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_12_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_07_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_09_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_04_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_11_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_05_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_06_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_08_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_10_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_03_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_05_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_06_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_08_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_07_10m_v_component_of_wind.grib
+
+📦 Processing batch 2/6 (20 files)
+✗ Error loading era5_2024_10_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_09_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_09_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_11_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_08_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_06_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_07_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_03_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_10_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_12_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_12_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_05_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_02_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_01_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_04_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_02_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_11_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_04_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_01_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_03_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+⚠ Empty result: era5_2024_02_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_04_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_01_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_11_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_09_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_10_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_09_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_11_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_08_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_06_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_07_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_03_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_10_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_12_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_12_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2024_05_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2024_01_2m_temperature.grib
+⚠ Empty result: era5_2024_02_2m_temperature.grib
+⚠ Empty result: era5_2024_04_2m_temperature.grib
+⚠ Empty result: era5_2024_03_2m_temperature.grib
+
+📦 Processing batch 3/6 (20 files)
+✗ Error loading era5_2024_06_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_05_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_02_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_04_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_10_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_12_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_11_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_01_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_05_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_08_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_09_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_07_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_03_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_11_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_08_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_09_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_06_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_10_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_07_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_12_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+⚠ Empty result: era5_2024_08_2m_temperature.grib
+⚠ Empty result: era5_2024_06_2m_temperature.grib
+⚠ Empty result: era5_2024_03_surface_pressure.grib
+⚠ Empty result: era5_2024_07_2m_temperature.grib
+⚠ Empty result: era5_2024_06_surface_pressure.grib
+⚠ Empty result: era5_2024_05_2m_temperature.grib
+⚠ Empty result: era5_2024_04_surface_pressure.grib
+⚠ Empty result: era5_2024_02_surface_pressure.grib
+⚠ Empty result: era5_2024_10_2m_temperature.grib
+⚠ Empty result: era5_2024_11_2m_temperature.grib
+⚠ Empty result: era5_2024_12_2m_temperature.grib
+⚠ Empty result: era5_2024_01_surface_pressure.grib
+⚠ Empty result: era5_2024_05_surface_pressure.grib
+⚠ Empty result: era5_2024_08_surface_pressure.grib
+⚠ Empty result: era5_2024_09_2m_temperature.grib
+⚠ Empty result: era5_2024_07_surface_pressure.grib
+⚠ Empty result: era5_2024_09_surface_pressure.grib
+⚠ Empty result: era5_2024_11_surface_pressure.grib
+⚠ Empty result: era5_2024_10_surface_pressure.grib
+⚠ Empty result: era5_2024_12_surface_pressure.grib
+
+📦 Processing batch 4/6 (20 files)
+✗ Error loading era5_2024_02_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_11_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_06_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_04_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_08_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_05_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_07_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_01_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_01_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_03_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_12_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_02_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_05_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_04_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_08_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_03_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_06_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_10_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2024_09_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_07_10m_u_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+⚠ Empty result: era5_2025_02_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2025_03_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_09_total_precipitation.grib
+⚠ Empty result: era5_2024_04_total_precipitation.grib
+⚠ Empty result: era5_2024_11_total_precipitation.grib
+⚠ Empty result: era5_2024_02_total_precipitation.grib
+⚠ Empty result: era5_2024_06_total_precipitation.grib
+⚠ Empty result: era5_2025_04_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_08_total_precipitation.grib
+⚠ Empty result: era5_2024_05_total_precipitation.grib
+⚠ Empty result: era5_2024_07_total_precipitation.grib
+⚠ Empty result: era5_2025_01_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2024_01_total_precipitation.grib
+⚠ Empty result: era5_2024_03_total_precipitation.grib
+⚠ Empty result: era5_2024_12_total_precipitation.grib
+⚠ Empty result: era5_2024_10_total_precipitation.grib
+⚠ Empty result: era5_2025_05_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2025_08_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2025_06_10m_u_component_of_wind.grib
+⚠ Empty result: era5_2025_07_10m_u_component_of_wind.grib
+
+📦 Processing batch 5/6 (20 files)
+✗ Error loading era5_2025_02_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_06_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_01_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_04_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_04_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_05_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_03_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_07_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_01_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_05_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_03_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_07_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_02_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_03_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_08_2m_dewpoint_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_02_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_06_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_04_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_08_10m_v_component_of_wind.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_01_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+⚠ Empty result: era5_2025_08_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_08_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_02_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_06_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_06_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_02_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_01_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_04_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_04_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_05_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_03_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_07_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_01_2m_dewpoint_temperature.grib
+⚠ Empty result: era5_2025_05_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_03_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_07_10m_v_component_of_wind.grib
+⚠ Empty result: era5_2025_01_2m_temperature.grib
+⚠ Empty result: era5_2025_02_2m_temperature.grib
+⚠ Empty result: era5_2025_04_2m_temperature.grib
+⚠ Empty result: era5_2025_03_2m_temperature.grib
+
+📦 Processing batch 6/6 (20 files)
+✗ Error loading era5_2025_02_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_06_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_05_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_01_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_02_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_07_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_01_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_06_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_05_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_03_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_07_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_03_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_08_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_05_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_04_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_08_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_08_2m_temperature.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_07_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_04_surface_pressure.grib: float() argument must be a string or a real number, not 'Timedelta'
+✗ Error loading era5_2025_06_total_precipitation.grib: float() argument must be a string or a real number, not 'Timedelta'
+⚠ Empty result: era5_2025_08_surface_pressure.grib
+⚠ Empty result: era5_2025_04_surface_pressure.grib
+⚠ Empty result: era5_2025_08_2m_temperature.grib
+⚠ Empty result: era5_2025_04_total_precipitation.grib
+⚠ Empty result: era5_2025_02_total_precipitation.grib
+⚠ Empty result: era5_2025_06_surface_pressure.grib
+⚠ Empty result: era5_2025_05_2m_temperature.grib
+⚠ Empty result: era5_2025_01_total_precipitation.grib
+⚠ Empty result: era5_2025_02_surface_pressure.grib
+⚠ Empty result: era5_2025_07_2m_temperature.grib
+⚠ Empty result: era5_2025_01_surface_pressure.grib
+⚠ Empty result: era5_2025_06_2m_temperature.grib
+⚠ Empty result: era5_2025_05_surface_pressure.grib
+⚠ Empty result: era5_2025_03_surface_pressure.grib
+⚠ Empty result: era5_2025_03_total_precipitation.grib
+⚠ Empty result: era5_2025_07_surface_pressure.grib
+⚠ Empty result: era5_2025_05_total_precipitation.grib
+⚠ Empty result: era5_2025_06_total_precipitation.grib
+⚠ Empty result: era5_2025_08_total_precipitation.grib
+⚠ Empty result: era5_2025_07_total_precipitation.grib
+
+📈 Processing Summary:
+   Files processed: 0
+   Files skipped (already exist): 0
+   Files missing: 0
+   Total rows added: 0
+
+============================================================
+FINAL SUMMARY
+============================================================
+Years processed: [2024, 2025]
+Variables available: ['10m_u_component_of_wind', '10m_v_component_of_wind', '2m_dewpoint_temperature', '2m_temperature', 'surface_pressure', 'total_precipitation']
+Output file: era5_weather_data_long.csv.gz
+Files processed: 0
+Files skipped (already existed): 0
+Files missing: 0
+============================================================
+✓ ERA5 data wrangling completed successfully!
+✓ Ready for daily automated updates
+Sun Aug 31 19:06:58 CEST 2025: [era5_weather_data] running - Step 90 - Elapsed: 350s - Committing and pushing results
