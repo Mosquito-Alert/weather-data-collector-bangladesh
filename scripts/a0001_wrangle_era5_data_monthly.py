@@ -17,6 +17,7 @@ import eccodes
 import xarray as xr
 import cfgrib
 import pandas as pd
+from pandas.api.types import is_datetime64tz_dtype
 from datetime import datetime
 import os
 import sys
@@ -157,6 +158,8 @@ def load_grib_to_long_format(filepath, variable_name, year, month):
 
         # Ensure time remains full datetime (not date-only)
         df_long['time'] = pd.to_datetime(df_long['time'], errors='coerce')
+        if is_datetime64tz_dtype(df_long['time']):
+            df_long['time'] = df_long['time'].dt.tz_convert('UTC').dt.tz_localize(None)
         
         # Add metadata
         df_long = df_long.assign(
@@ -191,12 +194,14 @@ def load_grib_to_long_format(filepath, variable_name, year, month):
             print(f"  ⚠ Removed {initial_rows - len(df_long)} rows with invalid values from {filepath.name}")
         
         if len(df_long) > 0:
+            df_long['hour'] = df_long['time'].dt.hour.astype('int8')
+            df_long['time'] = df_long['time'].dt.strftime('%Y-%m-%d %H:%M:%S')
             df_long['value'] = df_long['value'].astype('float32')
             df_long['year'] = df_long['year'].astype('int16')
             df_long['month'] = df_long['month'].astype('int8')
         
         # Reorder columns
-        df_long = df_long[['latitude', 'longitude', 'time', 'variable_name', 'grib_variable_name', 'value', 'year', 'month']]
+        df_long = df_long[['latitude', 'longitude', 'time', 'hour', 'variable_name', 'grib_variable_name', 'value', 'year', 'month']]
         
         return df_long
     
