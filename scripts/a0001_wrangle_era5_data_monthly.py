@@ -303,11 +303,16 @@ def main():
     total_files = 0
     
     for month_key in sorted(data_by_month.keys()):
-        if month_key in processed_months:
-            print(f"⏭ Skipping {month_key} (already processed)")
-            continue
-            
         month_info = data_by_month[month_key]
+        expected_output = processed_dir / str(month_info['year']) / f"era5_{month_info['year']}_{month_info['month']:02d}_all_variables.csv.gz"
+
+        if month_key in processed_months and check_file_exists(expected_output):
+            print(f"⏭ Skipping {month_key} (already processed and output exists)")
+            continue
+
+        if month_key in processed_months and not check_file_exists(expected_output):
+            print(f"↻ Reprocessing {month_key} (metadata marked processed but output missing/invalid)")
+            
         success, processed_key, files_count = process_month(
             month_info['year'], 
             month_info['month'], 
