@@ -117,18 +117,30 @@ def load_grib_to_long_format(filepath, variable_name, year, month):
         
         df = df.reset_index()
         
+        # Build full datetime from available temporal coordinates.
+        # ERA5-Land often stores hourly granularity as base `time` + `step`.
+        if 'time' in df.columns and 'step' in df.columns:
+            base_time = pd.to_datetime(df['time'], errors='coerce')
+            step_delta = pd.to_timedelta(df['step'], errors='coerce')
+            df['time_full'] = base_time + step_delta
+        elif 'valid_time' in df.columns:
+            df['time_full'] = pd.to_datetime(df['valid_time'], errors='coerce')
+        elif 'time' in df.columns:
+            df['time_full'] = pd.to_datetime(df['time'], errors='coerce')
+        else:
+            return pd.DataFrame()
+
         # Get variable columns (exclude coordinates)
         # These are common ERA5 coordinate/metadata columns that should not be treated as data variables
-        potential_coordinate_columns = ['latitude', 'longitude', 'time', 'step', 'valid_time', 'number', 'surface', 'heightAboveGround', 'isobaricInhPa']
+        potential_coordinate_columns = ['latitude', 'longitude', 'time', 'step', 'valid_time', 'time_full', 'number', 'surface', 'heightAboveGround', 'isobaricInhPa']
         coordinate_columns = [col for col in potential_coordinate_columns if col in df.columns]
         variable_columns = [col for col in df.columns if col not in coordinate_columns]
         
         if not variable_columns:
             return pd.DataFrame()
         
-        # Convert to long format
-        # Use the best available time coordinate (prefer valid_time, fallback to time)
-        time_col = 'valid_time' if 'valid_time' in df.columns else 'time'
+        # Convert to long format using full datetime coordinate
+        time_col = 'time_full'
         id_vars = ['latitude', 'longitude', time_col]
         
         df_long = pd.melt(
@@ -142,6 +154,9 @@ def load_grib_to_long_format(filepath, variable_name, year, month):
         # Rename time column to be consistent
         if time_col != 'time':
             df_long = df_long.rename(columns={time_col: 'time'})
+
+        # Ensure time remains full datetime (not date-only)
+        df_long['time'] = pd.to_datetime(df_long['time'], errors='coerce')
         
         # Add metadata
         df_long = df_long.assign(
@@ -169,9 +184,9 @@ def load_grib_to_long_format(filepath, variable_name, year, month):
         # Convert values, handling non-numeric data
         df_long['value'] = pd.to_numeric(df_long['value'], errors='coerce')
         
-        # Remove rows with invalid values
+        # Remove rows with invalid values/time
         initial_rows = len(df_long)
-        df_long = df_long.dropna(subset=['value'])
+        df_long = df_long.dropna(subset=['time', 'value'])
         if len(df_long) < initial_rows:
             print(f"  ⚠ Removed {initial_rows - len(df_long)} rows with invalid values from {filepath.name}")
         
